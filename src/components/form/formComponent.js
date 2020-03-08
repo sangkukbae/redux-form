@@ -49,24 +49,6 @@ export const FormComponent = ({
             hot: "hot"
           }}
         />
-
-        <Field
-          name="orderDate"
-          label="Order Date"
-          component={Datepicker}
-          change={change}
-        />
-
-        <Field
-          name="spiceLevel"
-          label="Spice Level"
-          component={Radio}
-          options={{
-            mild: "Mild",
-            medium: "Medium",
-            hot: "hot"
-          }}
-        />
         {formValues && formValues.spiceLevel === "hot" ? (
           <Field
             name="wantsFries"
@@ -76,6 +58,12 @@ export const FormComponent = ({
         ) : (
           ""
         )}
+        <Field
+          name="orderDate"
+          label="Order Date"
+          component={Datepicker}
+          change={change}
+        />
         <button
           type="submit"
           className="link br2 bg-blue white dim pa3 f6 sans-serif b--blue ba"
